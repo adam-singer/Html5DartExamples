@@ -8,8 +8,8 @@ Covers
 ------
 
 ### Offline / Storage
-    * [LocalStorageExample]() - [Web Storage](http://slides.html5rocks.com/#web-storage)  
-    * [WebSQLDBExample]() - [Web SQL Database](http://slides.html5rocks.com/#web-sql-db) Not supported by Dart
+    * [LocalStorageExample](https://github.com/financeCoding/Html5DartExamples/tree/master/LocalStorageExample) - [Web Storage](http://slides.html5rocks.com/#web-storage)  
+    * [WebSQLDBExample](https://github.com/financeCoding/Html5DartExamples/tree/master/WebSQLDBExample) - [Web SQL Database](http://slides.html5rocks.com/#web-sql-db) Not supported by Dart
 
 ### Realtime / Communication
 
@@ -18,7 +18,7 @@ Covers
 ### Semantics & Markup
 
 ### Graphics / Multimedia
-    * [Canvas2DExample]() - [Canvas 2D](http://slides.html5rocks.com/#canvas-2d)
+    * [Canvas2DExample](https://github.com/financeCoding/Html5DartExamples/tree/master/Canvas2DExample) - [Canvas 2D](http://slides.html5rocks.com/#canvas-2d)
 
 ### CSS3
 
