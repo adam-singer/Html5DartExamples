@@ -1,23 +1,26 @@
 <html>
   <head>
-   	<meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
-   
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
     <title>Canvas2DExample</title>
-    
-    <link href="http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono" rel="stylesheet" type="text/css" />
-    <link href="css/moon.css" class="theme" rel="stylesheet" />
-    <link href="css/sand.css" class="theme" rel="stylesheet" />
-    <link href="css/sea_wave.css" class="theme" rel="stylesheet" />
-    <link href="css/default.css" class="theme" rel="stylesheet" media="screen"  />
-    <link href="css/common.css" rel="stylesheet" media="screen" />
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans%7CDroid+Sans+Mono"
+      rel="stylesheet"
+      type="text/css">
+    <link href="css/moon.css" class="theme" rel="stylesheet">
+    <link href="css/sand.css" class="theme" rel="stylesheet">
+    <link href="css/sea_wave.css" class="theme" rel="stylesheet">
+    <link href="css/default.css" class="theme" rel="stylesheet" media="screen">
+    <link href="css/common.css" rel="stylesheet" media="screen">
   </head>
   <body>
     <div class="presentation">
-  <div class="slides" style="display: block; ">
-  <div class="slide effects current" id="canvas-2d">
-   <header><span class="html">HTML</span> <span class="js">Dart</span> <h1>Canvas 2D</h1></header>
-              <section>
+      <div class="slides" style="display: block;">
+        <div class="slide effects current" id="canvas-2d">
+          <header><span class="html">HTML</span> <span class="js">Dart</span>
+            <h1>Canvas 2D</h1>
+          </header>
+          <section>
             <style>
               #canvas-area {
                 background: white;
@@ -29,28 +32,22 @@
               }
             </style>
             <pre>&lt;canvas id="canvas" width="838" height="220"&gt;&lt;/canvas&gt;
-
-&lt;script&gt;
-  var canvasContext = document.getElementById("canvas").<b>getContext</b>("2d");
-  canvasContext.<b>fillRect</b>(250, 25, 150, 100);
-  
-  canvasContext.<b>beginPath</b>();
-  canvasContext.<b>arc</b>(450, 110, 100, Math.PI * 1/2, Math.PI * 3/2);
-  canvasContext.<b>lineWidth</b> = 15;
-  canvasContext.<b>lineCap</b> = 'round';
-  canvasContext.<b>strokeStyle</b> = 'rgba(255, 127, 0, 0.5)';
-  canvasContext.<b>stroke</b>();
-&lt;/script&gt;</pre>
-
-    <!--
-    <h1>Canvas2DExample</h1>
-    <h2 id="status">dart is not running</h2>
-    -->
-    <canvas id="canvas-area" width="838" height="225"></canvas>
-    <script type="text/javascript" src="Canvas2DExample.dart.app.js"></script>
-  
-  </section>
-  </div></div></div>
-  
+<br>void run() {
+HTMLCanvasElement canvasElement = document.<b>getElementById</b>('canvas-area');
+CanvasRenderingContext2D canvasRenderingContext2D <br>= canvasElement.<b>getContext</b>('2d'); 
+canvasRenderingContext2D.<b>fillRect</b>(250, 25, 150, 100);
+canvasRenderingContext2D.<b>beginPath</b>();
+canvasRenderingContext2D.<b>arc</b>(450, 110, 100, Math.PI * 1/2, Math.PI * 3/2, false);
+canvasRenderingContext2D.<b>lineWidth</b> = 15;
+canvasRenderingContext2D.<b>lineCap</b> = 'round';
+canvasRenderingContext2D.<b>setStrokeColor</b>('rgba(255, 127, 0, 0.5)');
+canvasRenderingContext2D.<b>stroke</b>(); 
+}</pre>
+            <canvas id="canvas-area" width="838" height="225"></canvas>
+            <script type="text/javascript" src="Canvas2DExample.dart.app.js"></script>
+          </section>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
