@@ -21,8 +21,7 @@ class LocalStorageExample {
         Date now = new Date.now();
         delta = now.difference(dateFromLocalStore);
         if (new_save) {
-          log.innerHTML = 'Saved. Content will be available after browser refresh/reopen.'; //+' s = ' + s 
-          //+ ' d = ' + d.toString() + ' now =' + now.toString();
+          log.innerHTML = 'Saved. Content will be available after browser refresh/reopen.'; 
           window.setTimeout(() {
             log.innerHTML = '';
           }, 3000);
