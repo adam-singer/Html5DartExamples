@@ -1,0 +1,50 @@
+<html>
+  <head>
+  	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+    <title>WebSQLDBExample</title>
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono" rel="stylesheet" type="text/css" />
+    <link href="css/moon.css" class="theme" rel="stylesheet" />
+    <link href="css/sand.css" class="theme" rel="stylesheet" />
+    <link href="css/sea_wave.css" class="theme" rel="stylesheet" />
+    <link href="css/default.css" class="theme" rel="stylesheet" media="screen"  />
+    <link href="css/common.css" rel="stylesheet" media="screen" />
+  </head>
+  <body>
+  <div class="presentation">
+  <div class="slides" style="display: block; ">
+  <div class="slide offline-storage current" id="web-sql-db">
+            <style>
+            #websqldb-example .record-list li:nth-child(odd) { background-color: #eee; }
+            #websqldb-example .record-list li:nth-child(even) { background-color: #ddd; }
+            #websqldb-example .record-list li {
+              padding-left: 5px;
+            }
+            #db-results {
+              max-height: 150px;
+              overflow: auto;
+              text-align: left;
+            }
+            #websqldb-example .error {
+              color: red;
+            }
+          </style>
+   <header><span class="js">Dart</span> <h1>Web SQL Database</h1></header>
+    <section>
+    <pre class="prettyprint"><span class="kwd"><span class="kwd">var</span></span><span class="pln"><span class="pln"> db </span></span><span class="pun"><span class="pun">=</span></span><span class="pln"><span class="pln"> window</span></span><span class="pun"><span class="pun">.</span></span><b><span class="pln"><span class="pln">openDatabase</span></span></b><span class="pun"><span class="pun">(</span></span><span class="str"><span class="str">"DBName"</span></span><span class="pun"><span class="pun">,</span></span><span class="pln"><span class="pln"> </span></span><span class="str"><span class="str">"1.0"</span></span><span class="pun"><span class="pun">,</span></span><span class="pln"><span class="pln"> </span></span><span class="str"><span class="str">"description"</span></span><span class="pun"><span class="pun">,</span></span><span class="pln"><span class="pln"> </span></span><span class="lit"><span class="lit">5</span></span><span class="pun"><span class="pun">*</span></span><span class="lit"><span class="lit">1024</span></span><span class="pun"><span class="pun">*</span></span><span class="lit"><span class="lit">1024</span></span><span class="pun"><span class="pun">);</span></span><span class="pln"><span class="pln"> </span></span><span class="com"><span class="com">//5MB</span></span><span class="pln"><span class="pln"><br>db</span></span><span class="pun"><span class="pun">.</span></span><b><span class="pln"><span class="pln">transaction</span></span></b><span class="pun"><span class="pun">(</span></span><span class="kwd"><span class="kwd">function</span></span><span class="pun"><span class="pun">(</span></span><span class="pln"><span class="pln">tx</span></span><span class="pun"><span class="pun">)</span></span><span class="pln"><span class="pln"> </span></span><span class="pun"><span class="pun">{</span></span><span class="pln"><span class="pln"><br>&nbsp; tx</span></span><span class="pun"><span class="pun">.</span></span><b><span class="pln"><span class="pln">executeSql</span></span></b><span class="pun"><span class="pun">(</span></span><em><span class="str"><span class="str">"SELECT * FROM test"</span></span></em><span class="pun"><span class="pun">,</span></span><span class="pln"><span class="pln"> </span></span><span class="pun"><span class="pun">[],</span></span><span class="pln"><span class="pln"> successCallback</span></span><span class="pun"><span class="pun">,</span></span><span class="pln"><span class="pln"> errorCallback</span></span><span class="pun"><span class="pun">);</span></span><span class="pln"><span class="pln"><br></span></span><span class="pun"><span class="pun">});</span></span></pre>
+    <div class="center" id="websqldb-example">
+                <input type="text" id="todoitem">
+            <button id="new-record-button">new to do item</button>
+            <button id="new-table-button">create table</button>
+            <button id="drop-table-button">drop table</button>
+            <p>See the generated database: Developer &gt; Developer Tools &gt; Storage</p>
+    <ul class="record-list" id="db-results"></ul>
+    <div id="db-log"></div>
+    </div>
+  </section>
+    <!--<h1>WebSQLDBExample</h1>
+    <h2 id="status">dart is not running</h2>-->
+    <script type="text/javascript" src="WebSQLDBExample.dart.app.js"></script>
+    </div></div></div>
+  </body>
+</html>

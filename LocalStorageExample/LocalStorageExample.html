@@ -1,0 +1,53 @@
+<html class=" transition transition">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+    <title>HTML5 Presentation Example in Dart: LocalStorageExample</title>
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono" rel="stylesheet" type="text/css" />
+    <link href="css/moon.css" class="theme" rel="stylesheet" />
+    <link href="css/sand.css" class="theme" rel="stylesheet" />
+    <link href="css/sea_wave.css" class="theme" rel="stylesheet" />
+    <link href="css/default.css" class="theme" rel="stylesheet" media="screen"  />
+    <link href="css/common.css" rel="stylesheet" media="screen" />
+  </head>
+  <body>
+  <div class="presentation">
+  <div class="slides" style="display: block; ">
+   <div class="slide offline-storage current" id="web-storage">
+    <!--<h1>LocalStorageExample</h1>-->
+    <!--
+    <h2 id="status">dart is not running</h2>
+    -->
+              <style>
+            #ta {
+              width: 400px;
+              height: 150px;
+              display: block;
+            }
+            #localstorage-message {
+              padding-top: 50px;
+            }
+          </style>
+           <section>
+           <pre class="prettyprint"><span class="com"><span class="com">// use localStorage for persistent storage</span></span><span class="pln"><span class="pln"><br></span></span><span class="com"><span class="com">// use sessionStorage for per tab storage</span></span><span class="pln"><span class="pln"><br>saveButton</span></span><span class="pun"><span class="pun">.</span></span><span class="pln"><span class="pln">addEventListener</span></span><span class="pun"><span class="pun">(</span></span><span class="str"><span class="str">'click'</span></span><span class="pun"><span class="pun">,</span></span><span class="pln"><span class="pln"> </span></span><span class="kwd"><span class="kwd">function</span></span><span class="pln"><span class="pln"> </span></span><span class="pun"><span class="pun">()</span></span><span class="pln"><span class="pln"> </span></span><span class="pun"><span class="pun">{</span></span><span class="pln"><span class="pln"><br>&nbsp; window</span></span><span class="pun"><span class="pun">.</span></span><b><span class="pln"><span class="pln">localStorage</span></span></b><span class="pun"><span class="pun">.</span></span><b><span class="pln"><span class="pln">setItem</span></span></b><span class="pun"><span class="pun">(</span></span><span class="str"><span class="str">'value'</span></span><span class="pun"><span class="pun">,</span></span><span class="pln"><span class="pln"> area</span></span><span class="pun"><span class="pun">.</span></span><span class="pln"><span class="pln">value</span></span><span class="pun"><span class="pun">);</span></span><span class="pln"><span class="pln"><br>&nbsp; window</span></span><span class="pun"><span class="pun">.</span></span><b><span class="pln"><span class="pln">localStorage</span></span></b><span class="pun"><span class="pun">.</span></span><b><span class="pln"><span class="pln">setItem</span></span></b><span class="pun"><span class="pun">(</span></span><span class="str"><span class="str">'timestamp'</span></span><span class="pun"><span class="pun">,</span></span><span class="pln"><span class="pln"> </span></span><span class="pun"><span class="pun">(</span></span><span class="kwd"><span class="kwd">new</span></span><span class="pln"><span class="pln"> </span></span><span class="typ"><span class="typ">Date</span></span><span class="pun"><span class="pun">()).</span></span><span class="pln"><span class="pln">getTime</span></span><span class="pun"><span class="pun">());</span></span><span class="pln"><span class="pln"><br></span></span><span class="pun"><span class="pun">},</span></span><span class="pln"><span class="pln"> </span></span><span class="kwd"><span class="kwd">false</span></span><span class="pun"><span class="pun">);</span></span><span class="pln"><span class="pln"><br>textarea</span></span><span class="pun"><span class="pun">.</span></span><span class="pln"><span class="pln">value </span></span><span class="pun"><span class="pun">=</span></span><span class="pln"><span class="pln"> window</span></span><span class="pun"><span class="pun">.</span></span><b><span class="pln"><span class="pln">localStorage</span></span></b><span class="pun"><span class="pun">.</span></span><b><span class="pln"><span class="pln">getItem</span></span></b><span class="pun"><span class="pun">(</span></span><span class="str"><span class="str">'value'</span></span><span class="pun"><span class="pun">);</span></span></pre>
+           <!--
+<pre>
+// use localStorage for persistent storage
+// use sessionStorage for per tab storage
+saveButton.addEventListener('click', function () {
+  window.<b>localStorage</b>.<b>setItem</b>('value', area.value);
+  window.<b>localStorage</b>.<b>setItem</b>('timestamp', (new Date()).getTime());
+}, false);
+textarea.value = window.<b>localStorage</b>.<b>getItem</b>('value');
+</pre> -->
+	    <p id="localstorage-message">Save text value on the client side (crash-safe)</p>
+	    <textarea id="ta" placeholder="Type your text here..."></textarea>
+	    <button id="save-ta">Save</button>
+	    <p id="ta-log"></p>
+    
+    <script type="text/javascript" src="LocalStorageExample.dart.app.js"></script>
+    </section>
+    </div>
+    </div> </div> 
+  </body>
+</html>
