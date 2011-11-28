@@ -55,9 +55,9 @@
           <section id="dnd-section">
 <pre class="prettyprint"><span class="pln">document</span><span class="pun">.</span><span class="pln">addEventListener</span><span class="pun">(</span><em><span class="str">'dragstart'</span></em><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="kwd">event</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; </span><span class="kwd">event</span><span class="pun">.</span><b><span class="pln">dataTransfer</span><span class="pun">.</span><span class="pln">setData</span></b><span class="pun">(</span><span class="str">'text'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'Customized text'</span><span class="pun">);</span><span class="pln"><br>&nbsp; </span><span class="kwd">event</span><span class="pun">.</span><b><span class="pln">dataTransfer</span><span class="pun">.</span><span class="pln">effectAllowed</span></b><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="str">'copy'</span><span class="pun">;</span><span class="pln"><br></span><span class="pun">},</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span></pre>
             <ol id="drag-zone">
-              <li><img src="src/dwd1.png" draggable="" class="copy"></li>
-              <li><span class="draggable-text" draggable="">Select text and drag (original text will be dropped)</span></li>
-              <li><span class="draggable-text" draggable="">Select text and drag (dragged text data will be altered from original)</span></li>
+              <li><img src="src/dwd1.png" draggable="true" class="copy"></li>
+              <li><span class="draggable-text" draggable="true">Select text and drag (original text will be dropped)</span></li>
+              <li><span class="draggable-text" draggable="true">Select text and drag (dragged text data will be altered from original)</span></li>
             </ol>
             <div id="drop-data">Source Data</div>
             <div id="drop-zone">Drop Area</div>

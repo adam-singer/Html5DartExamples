@@ -14,6 +14,7 @@
                 }
                 return true;
               }, true);
+
               dragZone.addEventListener('dragend', function(event) {
                 if (event.target.className) { // img case
                   event.target.style.border = "4px solid #888";
@@ -23,6 +24,7 @@
                 }
                 return true;
               }, true);
+
               dropZone.addEventListener('dragenter', function(event) {
                 if (event.preventDefault) event.preventDefault();
                 event.dataTransfer.dropEffect = 'copy';
