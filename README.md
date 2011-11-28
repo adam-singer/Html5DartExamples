@@ -13,7 +13,7 @@ Covers
 * [Application Cache](https://github.com/financeCoding/Html5DartExamples/tree/master/ApplicationCacheExample) - [Application Cache](http://slides.html5rocks.com/#app-cache) Errors with Dart or Code
 
 ### Realtime / Communication
-
+* [WebSocket](https://github.com/financeCoding/Html5DartExamples/tree/master/WebSocketsExample) - [WebSocket](http://slides.html5rocks.com/#web-sockets) Not Supported by Dart. WebSocket factory needs to be implemented.
 ### File / Hardware Access
 
 ### Semantics & Markup

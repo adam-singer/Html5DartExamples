@@ -1,0 +1,216 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans%7CDroid+Sans+Mono"
+      rel="stylesheet"
+      type="text/css">
+    <link href="css/moon.css" class="theme" rel="stylesheet">
+    <link href="css/sand.css" class="theme" rel="stylesheet">
+    <link href="css/sea_wave.css" class="theme" rel="stylesheet">
+    <link href="css/default.css" class="theme" rel="stylesheet" media="screen">
+    <link href="css/common.css" rel="stylesheet" media="screen">
+    <title>WebSocketsExample</title>
+  </head>
+  <body>
+    <div class="presentation">
+      <div class="slides" style="display: block;">
+        <div class="slide realtime-communication current" id="web-sockets">
+          <style>
+            #websockets-message {
+              text-align: center;
+              padding: 0px;
+            }
+            #ws-left {
+              float: left;
+              width: 490px;
+              padding-right: 10px
+            }
+            #ws-left h4 {
+              margin: 10px 0 0 0;
+            }
+            #ws-right {
+              float: left;
+              width: 300px;
+              border-left: solid 1px #9a9ab3;
+              padding-left: 20px;
+            }
+            #wsConsoleLog {
+              background-color: white;
+              border: solid 1px #999;
+              border-top-color: #ccc;
+              border-left-color: #ccc;
+              padding: 5px;
+              width: 290px;
+              height: 175px;
+              overflow-y: auto;
+            }
+            #wsConsoleLog p:first-of-type {
+              margin: 0 0;
+            }
+            #wsConsoleLog p {
+              margin: 0.5em 0;
+              font-size: 12px;
+            }
+            #ws-left input[type='text'] {
+              width: 370px;
+            }
+            #wsSecureCb {
+              position: relative;
+              top: 2px;
+            }
+            #wsSecureCbLabel {
+              position: relative;
+              left: -10px;
+            }
+            #ws-left button,
+            #ws-right button {
+              margin-top: 5px;
+              font-size: 14px;
+            }
+            #ws-config-config, #ws-config-message {
+              margin-top: 15px;
+            }
+            #ws-right button {
+              font-size: 14px;
+              margin-top: 3px;
+            }
+            #ws-powered {
+              text-align: center;
+              padding-top: 15px;
+              clear: both;
+            }
+            #ws-powered a {
+              border: 0
+            }
+            #wsKaazingLogo {
+              position: relative;
+              top: 4px;
+              left: 2px;
+              border: 0;
+            }
+          </style>
+          <header><span class="js">Dart</span>
+            <h1>WebSocket</h1>
+          </header>
+          <section>
+            <pre class="prettyprint"><span class="kwd">var</span><span class="pln"> socket </span><span
+class="pun">=</span><span
+class="pln"> </span><span
+class="kwd">new</span><span
+class="pln"> </span><b><span
+class="typ">WebSocket</span></b><span
+class="pun">(</span><span
+class="str">'ws://html5rocks.websocket.org/echo'</span><span
+class="pun">);</span><span
+class="pln"><br>socket</span><span
+class="pun">.</span><b><span
+class="pln">onopen</span></b><span
+class="pln"> </span><span
+class="pun">=</span><span
+class="pln"> </span><span
+class="kwd">function</span><span
+class="pun">(</span><span
+class="kwd">event</span><span
+class="pun">)</span><span
+class="pln"> </span><span
+class="pun">{</span><span
+class="pln"><br>&nbsp; socket</span><span
+class="pun">.</span><b><span
+class="pln">send</span></b><span
+class="pun">(</span><span
+class="str">'Hello, WebSocket'</span><span
+class="pun">);</span><span
+class="pln"><br></span><span
+class="pun">};</span><span
+class="pln"><br>socket</span><span
+class="pun">.</span><b><span
+class="pln">onmessage</span></b><span
+class="pln"> </span><span
+class="pun">=</span><span
+class="pln"> </span><span
+class="kwd">function</span><span
+class="pun">(</span><span
+class="kwd">event</span><span
+class="pun">)</span><span
+class="pln"> </span><span
+class="pun">{</span><span
+class="pln"> alert</span><span
+class="pun">(</span><span
+class="kwd">event</span><span
+class="pun">.</span><span
+class="pln">data</span><span
+class="pun">);</span><span
+class="pln"> </span><span
+class="pun">}</span><span
+class="pln"><br>socket</span><span
+class="pun">.</span><b><span
+class="pln">onclose</span></b><span
+class="pln"> </span><span
+class="pun">=</span><span
+class="pln"> </span><span
+class="kwd">function</span><span
+class="pun">(</span><span
+class="kwd">event</span><span
+class="pun">)</span><span
+class="pln"> </span><span
+class="pun">{</span><span
+class="pln"> alert</span><span
+class="pun">(</span><span
+class="str">'closed'</span><span
+class="pun">);</span><span
+class="pln"> </span><span
+class="pun">}</span></pre>
+            <p id="websockets-message">Full-duplex, bi-directional communication
+              over the Web: Both the server and client can send data at any
+              time, or even at the same time. Only the data itself is sent,
+              without the overhead of HTTP headers, dramatically reducing
+              bandwidth.</p>
+            <div id="ws-left"> Use the echo demo below to test a WebSocket
+              connection from your browser. Both the message you send and the
+              response you receive travel over the same WebSocket connection.
+              <div id="ws-config-location">
+                <h4>Location:</h4>
+                <input id="wsUri" type="text"> <br>
+                <input id="wsSecureCb" type="checkbox">
+                <label id="wsSecureCbLabel" for="wsSecureCb" style="color: black;">Use
+                  secure WebSocket (TLS/SSL)</label> <br>
+                <button id="wsConnectBut">Connect</button> <button id="wsDisconnectBut"
+                  disabled="disabled">Disconnect</button>
+              </div>
+              <div id="ws-config-message">
+                <h4>Message:</h4>
+                <input id="wsMessage" value="Hello, WebSocket" disabled="disabled"
+                  type="text">
+                <button id="wsSendBut" disabled="disabled">Send</button> </div>
+            </div>
+            <div id="ws-right">
+              <div id="ws-log"> <strong>Output:</strong>
+                <div id="wsConsoleLog">
+                  <p style="word-wrap: break-word;"><img src="src/websocket/tls-lock.png"
+                      height="9px"
+                      width="6px">
+                    DISCONNECTED</p>
+                </div>
+                <button id="wsClearLogBut">Clear log</button> </div>
+            </div>
+            <div id="ws-powered"> Demo powered by <a href="http://kaazing.com"
+                target="_blank"><img
+                  id="wsKaazingLogo"
+                  src="src/websocket/kaazing-logo_99x16.png"
+                  alt="Powered by Kaazing"
+                  height="16"
+                  width="99"></a>
+            </div>
+          </section>
+           <!--<script src="src/websocket/websocket.js" defer=""></script> -->
+           <span
+            class="counter"></span>
+          <script type="text/javascript" src="WebSocketsExample.dart.app.js"></script>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>
