@@ -1,0 +1,135 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans%7CDroid+Sans+Mono"
+      rel="stylesheet"
+      type="text/css">
+    <link href="css/moon.css" class="theme" rel="stylesheet">
+    <link href="css/sand.css" class="theme" rel="stylesheet">
+    <link href="css/sea_wave.css" class="theme" rel="stylesheet">
+    <link href="css/default.css" class="theme" rel="stylesheet" media="screen">
+    <link href="css/common.css" rel="stylesheet" media="screen">
+    <title>AudioVideoExample</title>
+  </head>
+  <body>
+    <div class="presentation">
+      <div class="slides" style="display: block;">
+      <div class="slide multimedia current" id="video-audio">
+          <style>
+            #video-column {
+              float: left;
+              width: 50%;
+              margin-top: 20px;
+            }
+            #reflection-button {
+              margin: 20px 0;
+            }
+            #audio-column {
+              float: left;
+              width: 45%;
+              margin-top: 120px;
+            }
+            .media-buttons {
+              margin: 40px 0;
+            }
+          </style>
+          <header><span class="html">HTML</span> <span class="js">Dart</span> <h1>Audio + Video</h1></header>
+          <section>
+            <pre class="prettyprint"><span class="tag">&lt;</span><b><span class="tag">audio</span></b><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"audio"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"sound.mp3"</span><span class="pln"> </span><b><span class="atn">controls</span></b><span class="tag">&gt;&lt;/audio&gt;</span><span class="pln"><br>document.getElementById("audio").</span><b><span class="pln">muted</span></b><span class="pln"> = false;</span></pre>
+<pre class="prettyprint"><span class="tag">&lt;</span><b><span class="tag">video</span></b><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"video"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"movie.webm"</span><span class="pln"> </span><b><span class="atn">autoplay</span></b><span class="pln"> </span><b><span class="atn">controls</span></b><span class="tag">&gt;&lt;/video&gt;</span><span class="pln"><br>document.getElementById("video").</span><b><span class="pln">play</span></b><span class="pln">();</span></pre>
+            <div id="video-column" class="center">
+              <input type="button" id="reflection-button" value="Add CSS reflection to video">
+              <video width="390" id="clip" controls="">
+                <source src="http://slides.html5rocks.com/src/chrome_japan.webm" type="video/webm; codecs=&quot;vp8, vorbis&quot;">
+                <source src="http://slides.html5rocks.com/src/chrome_japan.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
+                <source src="http://slides.html5rocks.com/src/chrome_japan.ogv" type="video/ogg; codecs=&quot;theora, vorbis&quot;">
+                Your browser does not support the video tag
+              </video>
+              <div class="media-buttons">
+                <input type="button" id="play-button" value="Play">
+                <input type="button" id="pause-button" value="Pause" disabled="">
+                <input type="button" id="mute" value="Mute">
+              </div>
+            </div>
+            
+            <div id="audio-column" class="center">
+              <audio id="audio-clip" width="670" controls="">
+                <source src="http://slides.html5rocks.com/src/rushus-modal_blues.mp3" type="audio/mpeg">
+                <source src="http://slides.html5rocks.com/src/rushus-modal_blues.ogg" type="audio/ogg">
+                Your browser does not support the audio tag
+              </audio>
+              <div class="media-buttons">
+                <input type="button" id="audio-play-button" value="Play">
+                <input type="button" id="audio-pause-button"  value="Pause" disabled="">
+                <input type="button" id="audio-mute" value="Mute">
+              </div>
+            </div>
+          </section>
+          <!--
+          <script defer="">
+            var videoClip = document.getElementById('clip');
+            var playButton = document.getElementById('play-button');
+            var pauseButton = document.getElementById('pause-button');
+
+            function PlayVideo() {
+              videoClip.play();
+              playButton.disabled = true;
+              pauseButton.disabled = false;
+            }
+
+            function PauseVideo() {
+              videoClip.pause();
+              playButton.disabled = false;
+              pauseButton.disabled = true;
+            }
+
+            function MuteUnMute() {
+              document.getElementById('mute').value = videoClip.muted ? 'Mute' : 'Unmute';
+              videoClip.muted = videoClip.muted ? false : true;
+            }
+
+            function OnFinished() {
+              playButton.disabled = false;
+              pauseButton.disabled = true;
+            }
+
+            function addReflection() {
+              videoClip.style.webkitBoxReflect = videoClip.style.webkitBoxReflect !== '' ? '' : "below 0px -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), color-stop(0.55, transparent), to(white))";
+            }
+          </script>
+
+          <script defer="">
+            var audioClip = document.getElementById('audio-clip');
+            var audioPlayButton = document.getElementById('audio-play-button');
+            var audioPauseButton = document.getElementById('audio-pause-button');
+            audioClip.addEventListener('ended', OnAudioFinished, false);
+
+            function PlayAudio() {
+              audioClip.play();
+              audioPlayButton.disabled = true;
+              audioPauseButton.disabled = false;
+            }
+
+            function PauseAudio() {
+              audioClip.pause();
+              audioPlayButton.disabled = false;
+              audioPauseButton.disabled = true;
+            }
+
+            function MuteUnMuteAudio() {
+              document.getElementById('audio-mute').value = audioClip.muted ? 'Mute' : 'Unmute';
+              audioClip.muted = audioClip.muted ? false : true;
+            }
+
+            function OnAudioFinished() {
+              audioPlayButton.disabled = false;
+              audioPauseButton.disabled = true;
+            }
+          </script> -->
+        <span class="counter"></span>
+    <script type="text/javascript" src="AudioVideoExample.dart.app.js"></script>
+    </div></div></div>
+  </body>
+</html>
