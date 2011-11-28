@@ -23,6 +23,7 @@ Covers
 
 ### Graphics / Multimedia
 * [Canvas2DExample](https://github.com/financeCoding/Html5DartExamples/tree/master/Canvas2DExample) - [Canvas 2D](http://slides.html5rocks.com/#canvas-2d)
+* [AudioVideoExample](https://github.com/financeCoding/Html5DartExamples/tree/master/AudioVideoExample) - [Audio Video](http://slides.html5rocks.com/#video-audio)
 
 ### CSS3
 
