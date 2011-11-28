@@ -1,7 +1,7 @@
 Html5 Dart Examples
 ===================
 
-Simple examples taken from [slides](http://slides.html5rocks.com/) by [Marcin Wichary](http://slides.html5rocks.com/disclaimer.html) and implemented in Dart. 
+Simple examples taken from [html5rocks](http://slides.html5rocks.com/) by [Marcin Wichary](http://slides.html5rocks.com/disclaimer.html) and implemented in [Dart](http://www.dartlang.org/). 
 Some items cannot be implemented cause dart does not support it yet. 
 
 Covers
