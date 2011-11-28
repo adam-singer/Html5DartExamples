@@ -14,8 +14,10 @@ Covers
 
 ### Realtime / Communication
 * [WebSocket](https://github.com/financeCoding/Html5DartExamples/tree/master/WebSocketsExample) - [WebSocket](http://slides.html5rocks.com/#web-sockets) Not supported by Dart. WebSocket factory needs to be implemented.
+
 ### File / Hardware Access
-* [Native Drag & Drop](https://github.com/financeCoding/Html5DartExamples/tree/master/NativeDragAndDropExample) - [Native Drag & Drop](http://slides.html5rocks.com/#drag-and-drop) Not supported by Dart. Check status of this [bug](http://code.google.com/p/dart/issues/detail?id=538) to resolve.
+* [Native Drag & Drop](https://github.com/financeCoding/Html5DartExamples/tree/master/NativeDragAndDropExample) - [Native Drag & Drop](http://slides.html5rocks.com/#drag-and-drop) Not supported by Dart. Check status of this [bug](http://code.google.com/p/dart/issues/detail?id=538) to resolve
+
 ### Semantics & Markup
 
 ### Graphics / Multimedia
